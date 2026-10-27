@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nonsense Question Generator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #222;
+            color: white;
+            margin-top: 100px;
+        }
+
+        button {
+            font-size: 24px;
+            padding: 15px 30px;
+            cursor: pointer;
+        }
+
+        #question {
+            margin: 40px;
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Nonsense Question Generator</h1>
+
+    <div id="question">
+        Click the button...
+    </div>
+
+    <button onclick="generateQuestion()">
+        Confuse Me
+    </button>
+
+    <script>
+
+        const questions = [
+            "How big is Moby Dick?",
+            "Is Tupac still alive?",
+            "Can clouds get sunburned?",
+            "Can fish pay taxes?",
+            "Is gravity working remotely?",
+            "Does the moon know it's famous?",
+            "Can a potato become CEO?",
+            "How old is tomorrow?",
+            "Are you addicted to a monthly salary?"
+        ];
+
+        function generateQuestion() {
+
+            const random =
+                questions[Math.floor(Math.random() * questions.length)];
+
+            document.getElementById("question").textContent = random;
+        }
+
+    </script>
+
+</body>
+
+</html>
